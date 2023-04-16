@@ -35,20 +35,48 @@ Write the detailed procedure here
 ## Program:
 /*
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+
+HALF SUBTRACTOR:
+module HalfSub(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference=(a^b);
+assign borrow=(~a&b);
+endmodule
+
+
+FULL SUBTRACTOR:
+module FullSub(a,b,c,difference,borrow);
+input a,b,c;
+output difference,borrow;
+assign borrow=(~a&(b^c)|(b&c));
+assign diggerence=(a^b^c);
+endmodule
+
+Developed by: Deepika.K
+RegisterNumber: 212222050009 
 */
+LOGIC GATES
+![logic gate Ex4](https://user-images.githubusercontent.com/128984662/232322397-fc569004-c38a-4155-865a-4ed44c21eaee.jpeg)
 
 ## Output:
-
 ## Truthtable
-
-
+HALF SUBTRACTOR
+![Ex4 HS truthtable](https://user-images.githubusercontent.com/128984662/232322602-022d4a97-7b7e-4e73-b154-45cc39e55ff3.jpeg)
+FULL SUBTRACTOR
+![Ex4 FS truthtable](https://user-images.githubusercontent.com/128984662/232322876-b878f147-55ec-4c50-826e-3ec3a8f5cdb9.jpeg)
 
 ##  RTL realization
-
+HALF SUBTRACTOR
+![ex4 HS rtl](https://user-images.githubusercontent.com/128984662/232323079-fff37973-c2ec-4585-9f73-0d2b870e29cc.jpeg)
+FULL SUBTRACTOR
+![Ex4 FS rtl](https://user-images.githubusercontent.com/128984662/232323142-3eaef6c7-0ccf-47eb-ae19-fd1ffa3e4088.jpeg)
 
 ## Timing diagram 
+HALF SUBTRACTOR
+![ex4 HS timing diagram](https://user-images.githubusercontent.com/128984662/232323196-ffd0eb29-7041-4c1f-ac07-91b33f777a99.jpeg)
+FULL SUBTRACTOR
+![ex4 FS timing diagram](https://user-images.githubusercontent.com/128984662/232323244-ca5ebbac-3753-4c67-84a3-c53012a85d97.jpeg)
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
